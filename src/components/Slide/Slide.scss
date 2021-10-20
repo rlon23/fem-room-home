@@ -1,0 +1,49 @@
+@import './../../scss/mixins';
+
+.Slide {
+  //box-sizing: border-box;
+
+  &__image {
+    width: 100vw;
+    line-height: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    text-align: left;
+    padding: em(72) em(32);
+    background-color: var(--white);
+  }
+
+  &__title {
+    margin: 0 0 em(10) 0;
+    font-size: em(28);
+    font-weight: 600;
+    color: var(--black);
+    line-height: 31px;
+    letter-spacing: -0.04em;
+  }
+
+  &__description {
+    font-size: em(12);
+    font-weight: 500;
+    color: var(--dark-gray);
+    line-height: 165%;
+    letter-spacing: -0.02em;
+    margin-bottom: em(65);
+  }
+
+  &__btn {
+    background-color: transparent;
+    border-style: none;
+    letter-spacing: 0.835em;
+
+    .btn-img {
+      margin-left: em(43);
+    }
+  }
+}

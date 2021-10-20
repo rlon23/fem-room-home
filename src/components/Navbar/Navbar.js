@@ -22,6 +22,7 @@ function Navbar() {
         />
         <img src={logo} className='Navbar__logo' alt='logo' />
       </div>
+      
       <div
         className={`${
           isMobileOpen ? 'Navbar__mobile-menu open' : 'Navbar__mobile-menu'

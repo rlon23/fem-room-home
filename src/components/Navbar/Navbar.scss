@@ -5,6 +5,7 @@
   background-color: transparent;
   position: absolute;
   width: 100vw;
+  z-index: 1;
 
   &__mobile {
     position: relative;
@@ -27,6 +28,7 @@
 
     &.open {
       display: block;
+      top: 0;
     }
   }
 
