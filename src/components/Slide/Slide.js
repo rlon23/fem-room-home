@@ -1,11 +1,20 @@
 import './Slide.scss';
 import arrow from './../../images/icon-arrow.svg';
+import iconPrev from './../../images/icon-angle-left.svg'
+import iconNext from './../../images/icon-angle-right.svg'
 
-function Slide({ image, title, description }) {
+function Slide({ image, title, description, onClick }) {
   return (
     <section className='Slide'>
       <div className='Slide__image'>
         <img src={image} alt='' />
+
+        <div className="prev" onClick={() => onClick(-1)}>
+          <img src={iconPrev} alt="" className='icon'/>
+        </div>
+        <div className="next" onClick={() => onClick(1)}>
+          <img src={iconNext} alt="" className='icon'/>
+        </div>
       </div>
 
       <div className='Slide__content'>

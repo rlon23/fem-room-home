@@ -1,6 +1,13 @@
 @import './scss/main.scss';
 .App {
   text-align: center;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  &__hero {
+    // display: flex;
+    // overflow: hidden;
+  }
 
   .attribution {
     color: var(--white);
@@ -9,6 +16,6 @@
     padding: 20px 32px;
   }
   .attribution a {
-    color: var(--dark-gray);    
+    color: var(--dark-gray);
   }
 }
