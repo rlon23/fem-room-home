@@ -1,4 +1,5 @@
 import './App.scss';
+import AboutFurniture from './components/AboutFurniture/AboutFurniture';
 import Navbar from './components/Navbar/Navbar';
 import Slide from './components/Slide/Slide';
 import bg_1 from './images/mobile-image-hero-1.jpg';
@@ -33,6 +34,8 @@ function App() {
             'Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.'
           }
         />
+
+        <AboutFurniture />
 
         <div className='attribution'>
           Challenge by{' '}

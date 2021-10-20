@@ -3,10 +3,12 @@
   text-align: center;
 
   .attribution {
+    color: var(--white);
     font-size: 11px;
     text-align: center;
+    padding: 20px 32px;
   }
   .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--dark-gray);    
   }
 }

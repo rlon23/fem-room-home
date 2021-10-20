@@ -12,11 +12,11 @@ function Slide({ image, title, description }) {
         <h2 className='Slide__title'>{title}</h2>
         <p className='Slide__description'>{description}</p>
         <button className='Slide__btn cta'>
-          SHOP NOW<img src={arrow} alt='' className='btn-img'/>
+          shop now<img src={arrow} alt='' className='btn-img'/>
         </button>
       </div>
     </section>
   );
 }
 
-export default Slide;
+export default Slide; 

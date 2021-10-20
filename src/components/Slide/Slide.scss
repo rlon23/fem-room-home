@@ -32,7 +32,7 @@
     font-size: em(12);
     font-weight: 500;
     color: var(--dark-gray);
-    line-height: 165%;
+    line-height: 20px;
     letter-spacing: -0.02em;
     margin-bottom: em(65);
   }
@@ -41,6 +41,7 @@
     background-color: transparent;
     border-style: none;
     letter-spacing: 0.835em;
+    text-transform: uppercase;
 
     .btn-img {
       margin-left: em(43);
