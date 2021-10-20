@@ -16,10 +16,10 @@ function App() {
 
         <div className='attribution'>
           Challenge by{' '}
-          <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>
+          <a href='https://www.frontendmentor.io?ref=challenge' target='_blank' rel="noreferrer">
             Frontend Mentor
           </a>
-          . Coded by <a href='https://github.com/rlon23' target='_blank'>Arlony Diaz</a>.
+          . Coded by <a href='https://github.com/rlon23' target='_blank' rel="noreferrer">Arlony Diaz</a>.
         </div>
       </main>
     </div>

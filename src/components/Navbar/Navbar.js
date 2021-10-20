@@ -2,8 +2,12 @@ import './Navbar.scss';
 import logo from './../../images/logo.svg';
 import hamburger from './../../images/icon-hamburger.svg';
 import close from './../../images/icon-close.svg';
+import React, { useState } from 'react';
 
 function Navbar() {
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const bodyEl = document.body;
+
   return (
     <nav className='Navbar'>
       <div className='Navbar__mobile'>
@@ -11,12 +15,28 @@ function Navbar() {
           src={hamburger}
           className='Navbar__mobile-toggle'
           alt='mobile-menu-toggle'
+          onClick={() => {
+            setIsMobileOpen(true);
+            bodyEl.style.overflow = 'hidden';
+          }}
         />
         <img src={logo} className='Navbar__logo' alt='logo' />
       </div>
-      <div className='Navbar__mobile-menu'>
+      <div
+        className={`${
+          isMobileOpen ? 'Navbar__mobile-menu open' : 'Navbar__mobile-menu'
+        }`}
+      >
         <ul className='Navbar__links'>
-          <img src={close} alt='' className='close-mobile-menu' />
+          <img
+            src={close}
+            alt=''
+            className='close-mobile-menu'
+            onClick={() => {
+              setIsMobileOpen(false);
+              bodyEl.style.overflow = 'auto';
+            }}
+          />
           <li>
             <a href='#home' className='Navbar__link'>
               home
