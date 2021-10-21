@@ -1,13 +1,6 @@
 @import './scss/main.scss';
 .App {
   text-align: center;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-
-  &__hero {
-    // display: flex;
-    // overflow: hidden;
-  }
 
   .attribution {
     color: var(--white);
@@ -17,5 +10,12 @@
   }
   .attribution a {
     color: var(--dark-gray);
+  }
+}
+
+body {
+  margin: 0 auto;
+  @include breakpoint(xl) {
+    max-width: 1440px;
   }
 }

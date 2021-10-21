@@ -7,14 +7,22 @@
   width: 100vw;
   z-index: 1;
 
+  @include breakpoint(md) {
+    padding: em(64) em(0);
+  }
+
   &__mobile {
     position: relative;
+
+    @include breakpoint(md) {
+      display: none;
+    }
   }
 
   &__mobile-toggle {
     position: absolute;
-    left: em(24);
-    cursor: pointer;
+    left: 24px;
+    line-height: 0;
   }
 
   &__mobile-menu {
@@ -26,9 +34,17 @@
     margin: 0;
     background-color: var(--black-transparent);
 
+    @include breakpoint(md) {
+      display: none;
+    }
+
     &.open {
       display: block;
       top: 0;
+
+      @include breakpoint(md) {
+        display: none;
+      }
     }
   }
 
@@ -44,9 +60,25 @@
     font-size: em(12);
     font-weight: 700;
     list-style: none;
-    padding: 48px  0;
+    padding: 48px 0;
     margin: 0;
     background-color: var(--white);
+
+    @include breakpoint(md) {
+      padding: 0;
+      justify-content: flex-start;
+      background-color: transparent;
+    }
+
+    .logo {
+      @include breakpoint(md) {
+        margin-left: 64px;
+        margin-right: 28px;
+      }
+      @include breakpoint(lg) {
+        margin-right: 56px;
+      }
+    }
 
     .close-mobile-menu {
       margin-left: 26px;
@@ -62,5 +94,22 @@
   &__link {
     text-decoration: none;
     color: var(--black);
+
+    @include breakpoint(md) {
+      color: var(--white);
+      margin-right: 16px;
+    }
+
+    @include breakpoint(lg) {
+      margin-right: 32px;
+    }
+  }
+
+  &__desktop {
+    display: none;
+
+    @include breakpoint(md) {
+      display: block;
+    }
   }
 }

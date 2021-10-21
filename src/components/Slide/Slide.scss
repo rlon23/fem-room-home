@@ -1,39 +1,93 @@
 @import './../../scss/mixins';
 
 .Slide {
-  scroll-snap-align: start;
   display: none;
+  flex-flow: column wrap;
+
+  @include breakpoint(md) {
+    flex-flow: row nowrap;
+    overflow: hidden;
+  }
 
   &__image {
     width: 100vw;
     line-height: 0;
     position: relative;
 
+    @include breakpoint(md) {
+      flex-basis: 840px;
+    }
+
     img {
       width: 100%;
       height: auto;
     }
 
-    .prev,
-    .next {
+    .image-mobile {
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+
+    .image {
+      display: none;
+
+      @include breakpoint(md) {
+        display: block;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: left;
+      }
+    }
+
+    .Slide__buttons {
       position: absolute;
-      right: 0;
       bottom: 0;
-      height: 56px;
-      width: 56px;
-      background-color: var(--black);
-      float: left;
-    }
+      right: 0;
 
-    .prev {
-      right: 56px;
-    }
+      @include breakpoint(md) {
+        right: -136px;
+      }
 
-    .icon {
-      position: relative;
-      top: 37%;
-      width: 11px;
-      height: auto;
+      @include breakpoint(lg) {
+        right: -160px;
+      }
+
+      .prev,
+      .next {
+        display: inline-block;
+        cursor: pointer;
+        height: 56px;
+        width: 56px;
+        background-color: var(--black);
+
+        @include breakpoint(md) {
+          height: 68px;
+          width: 68px;
+        }
+
+        @include breakpoint(lg) {
+          height: 80px;
+          width: 80px;
+        }
+      }
+
+      .prev:hover,
+      .next:hover {
+        background-color: var(--very-dark-gray);
+      }
+
+      .icon {
+        position: relative;
+        top: 37%;
+        width: 10px;
+        height: auto;
+
+        @include breakpoint(md) {
+          width: 14px;
+        }
+      }
     }
   }
 
@@ -41,6 +95,20 @@
     text-align: left;
     padding: em(72) em(32);
     background-color: var(--white);
+    box-sizing: border-box;
+
+    @include breakpoint(md) {
+      flex-basis: 600px;
+      padding: em(80) em(40) em(110) em(60);
+    }
+
+    @include breakpoint(lg) {
+      padding: em(100) em(80) em(130) em(80);
+    }
+
+    @include breakpoint(xl) {
+      padding: em(120) em(100) em(150) em(100);
+    }
   }
 
   &__title {
@@ -50,6 +118,11 @@
     color: var(--black);
     line-height: 31px;
     letter-spacing: -0.04em;
+
+    @include breakpoint(md) {
+      font-size: em(40);
+      line-height: 45px;
+    }
   }
 
   &__description {
@@ -59,6 +132,10 @@
     line-height: 20px;
     letter-spacing: -0.02em;
     margin-bottom: em(65);
+
+    @include breakpoint(md) {
+      margin-bottom: em(40);
+    }
   }
 
   &__btn {
@@ -66,9 +143,20 @@
     border-style: none;
     letter-spacing: 0.835em;
     text-transform: uppercase;
+    cursor: pointer;
+    padding: 0;
+
+    @include breakpoint(md) {
+      color: var(--dark-gray);
+    }
 
     .btn-img {
       margin-left: em(43);
+
+      @include breakpoint(md) {
+        filter: invert(66%) sepia(0%) saturate(0%) hue-rotate(227deg)
+          brightness(97%) contrast(87%);
+      }
     }
   }
 }
