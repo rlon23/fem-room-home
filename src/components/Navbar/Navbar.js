@@ -31,15 +31,17 @@ function Navbar() {
         }`}
       >
         <ul className='Navbar__links'>
-          <img
-            src={close}
-            alt=''
-            className='close-mobile-menu'
-            onClick={() => {
-              setIsMobileOpen(false);
-              bodyEl.style.overflow = 'auto';
-            }}
-          />
+          <li>
+            <img
+              src={close}
+              alt=''
+              className='close-mobile-menu'
+              onClick={() => {
+                setIsMobileOpen(false);
+                bodyEl.style.overflow = 'auto';
+              }}
+            />
+          </li>
           <li>
             <a href='#home' className='Navbar__link'>
               home
@@ -65,11 +67,9 @@ function Navbar() {
 
       <div className='Navbar__desktop'>
         <ul className='Navbar__links'>
-          <img
-            src={logo}
-            alt='room'
-            className='logo'
-          />
+          <li>
+            <img src={logo} alt='room' className='logo' />
+          </li>
           <li>
             <a href='#home' className='Navbar__link'>
               home
