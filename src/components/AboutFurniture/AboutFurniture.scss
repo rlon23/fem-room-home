@@ -4,18 +4,44 @@
   background-color: var(--white);
   text-align: left;
 
+  @include breakpoint(md) {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
   &__image {
     width: 100vw;
     line-height: 0;
+    box-sizing: border-box;
 
     img {
       width: 100%;
       height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: left;
+    }
+
+    @include breakpoint(md) {
+      &.dark {
+        flex-basis: 420px;
+      }
+
+      &.light {
+        flex-basis: 440px;
+      }
     }
   }
 
   &__content {
     padding: em(56) em(32);
+    box-sizing: border-box;
+
+    @include breakpoint(md) {
+      flex-basis: 580px;
+      padding: em(69) em(47) em(67) em(48);
+    }
   }
 
   &__title {

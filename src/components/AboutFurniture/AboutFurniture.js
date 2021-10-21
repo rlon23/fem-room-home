@@ -5,7 +5,7 @@ import img2 from './../../images/image-about-light.jpg';
 function AboutFurniture() {
   return (
     <section className='AboutFurniture'>
-      <div className='AboutFurniture__image'>
+      <div className='AboutFurniture__image dark'>
         <img src={img1} alt='' />
       </div>
 
@@ -21,7 +21,7 @@ function AboutFurniture() {
         </p>
       </div>
 
-      <div className='AboutFurniture__image'>
+      <div className='AboutFurniture__image light'>
         <img src={img2} alt='' />
       </div> 
     </section>

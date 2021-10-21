@@ -72,10 +72,11 @@
 
     .logo {
       @include breakpoint(md) {
-        margin-left: 64px;
+        margin-left: 40px;
         margin-right: 28px;
       }
       @include breakpoint(lg) {
+        margin-left: 64px;
         margin-right: 56px;
       }
     }
